@@ -5,9 +5,17 @@ import React from 'react';
 import "./SeasonDisplay.css";
 
 const seasonConfige = {
+    spring:{
+        text: "Rain, Rain and pretty flowers...",
+        iconName: "massive umbrella icon"
+    },
     summer: {
-        text: "Let's hit the beach",
+        text: "Let's hit the beach...",
         iconName: "massive sun outline icon"
+    },
+    fall:{
+        text: "Look at the pretty leaves...",
+        iconName: "massive leaf icon"
     },
    winter: {
         text: "Burr, it's cold in here...",
@@ -16,10 +24,33 @@ const seasonConfige = {
 }
 
 const getSeason = (lat, month) => {
-    if( month > 3 && month < 9){
-        return lat > 0 ? "summer" : "winter";
-    }else{
-        return lat > 0 ? "winter" : "summer";
+    switch(month){
+        case 0:
+            return lat > 0 ? "winter" : "summer"
+        case 1:
+            return lat > 0 ? "winter" : "summer"
+        case 2:
+            return lat > 0 ? "spring" : "fall"
+        case 3:
+            return lat > 0 ? "spring" : "fall"
+        case 4:
+            return lat > 0 ? "spring" : "fall"
+        case 5:
+            return lat > 0 ? "summer" : "winter"
+        case 6:
+            return lat > 0 ? "summer" : "winter"
+        case 7: 
+            return lat > 0 ? "summer" : "winter"
+        case 8: 
+            return lat > 0 ? "fall" : "spring"
+        case 9:
+            return lat > 0 ? "fall" : "spring"
+        case 10:
+            return lat > 0 ? "fall" : "spring"
+        case 11:
+            return lat > 0 ? "fall" : "spring"
+        default:
+            return lat > 0 ? "winter" : "summer"
     }
 }
 

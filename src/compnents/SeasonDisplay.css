@@ -17,18 +17,38 @@
     height: 100vh;
 }
 
-.season-display.winter i{
-    color: blue;
+.season-display.winter i,
+.season-display.winter h1{
+    color: #059abd;
 }
 
-.season-display.summer i{
-    color: red;
+.season-display.summer i,
+.season-display.summer h1{
+    color: #ff9595;
+}
+
+.season-display.spring i,
+.season-display.spring h1{
+    color: #64c7b5;
+}
+
+.season-display.fall i,
+.season-display.fall h1{
+    color: #94562b;
 }
 
 .winter{
-    background-color: aliceblue;
+    background-color: #cdf1f9;
 }
 
 .summer{
-    background-color: orange;
+    background-color: #ffe98c;
+}
+
+.spring{
+    background-color: #99ccf2;
+}
+
+.fall{
+    background-color: #ff6700;
 }

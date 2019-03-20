@@ -13,7 +13,6 @@ class App extends React.Component{
     /* INITIALIZING STATE */
     state = {
         lat: null,
-        long: null,
         errorMessage: ""
     };
 
@@ -21,7 +20,7 @@ class App extends React.Component{
     componentDidMount() {
         // GET USERS CURRENT LOCATION FROM GEOLOCATION API
         window.navigator.geolocation.getCurrentPosition(
-            position => this.setState({ lat: position.coords.latitude, long: position.coords.longitude }),
+            position => this.setState({ lat: position.coords.latitude }),
             err => this.setState({ errorMessage: err.message })
         );
     }
