@@ -2,16 +2,16 @@
 import React from 'react';
 
 // STYLESHEETS 
-import "./seasondisplay.css";
+import "./SeasonDisplay.css";
 
 const seasonConfige = {
     summer: {
         text: "Let's hit the beach",
-        iconName: " massive sun outline icon"
+        iconName: "massive sun outline icon"
     },
    winter: {
         text: "Burr, it's cold in here...",
-        iconName: " massive snowflake outline icon"
+        iconName: "massive snowflake outline icon"
     }
 }
 

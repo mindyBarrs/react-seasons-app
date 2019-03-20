@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 /* COMPONENTS */
-import SeasonDisplay from "./components/SeasonDisplay";
+import SeasonDisplay from "./compnents/SeasonDisplay";
 
 
 /* Class-Based Component */
