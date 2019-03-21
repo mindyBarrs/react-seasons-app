@@ -7,8 +7,7 @@
     border: 3px solid #cf000f;
 }
 
-.border{
-    display: flex;
+.display-area{
     display: flex;
     justify-content: center;
     align-items: center;
