@@ -26,7 +26,7 @@ class App extends React.Component{
 
     /* HELPER FUNCTION */
     renderContent() {
-        if(this.state.err && !this.state.lat){
+        if(this.state.errorMessage && !this.state.lat){
             return(
                 <ErrorMessage errorMessage={ this.state.errorMessage }></ErrorMessage>
             );
