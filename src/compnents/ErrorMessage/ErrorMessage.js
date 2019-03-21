@@ -1,4 +1,8 @@
+/* LIBRARIES */
 import React from "react";
+
+/* STYLESHEETS */
+import "./ErrorMessage.css";
 
 const ErrorMessage = (props) => {
     return(
