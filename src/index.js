@@ -5,11 +5,10 @@ import ReactDOM from "react-dom";
 /* COMPONENTS */
 import SeasonDisplay from "./compnents/SeasonDisplay/SeasonDisplay";
 import Spinner from "./compnents/Spinner/Spinner";
+import ErrorMessage from "./compnents/ErrorMessage/ErrorMessage";
 
 /* Class-Based Component */
 class App extends React.Component{
-    
-
     /* INITIALIZING STATE */
     state = {
         lat: null,
@@ -23,23 +22,14 @@ class App extends React.Component{
             position => this.setState({ lat: position.coords.latitude }),
             err => this.setState({ errorMessage: err.message })
         );
-    }
+    };
 
-    /* GOOD PLACE TO DO MORE DATA-LOADING WHEN STATE/PROP CHANGES 
-    componentDidUpdate(){
-        console.log("My component just updated -  it rerendered!");
-    }*/
-
-    /* GOOD PLACE TO DO CLEANUP 
-    componentWillUnMount(){
-
-    }*/
-    
-    render(){
+    /* HELPER FUNCTION */
+    renderContent() {
         if(this.state.err && !this.state.lat){
-            return(<div>
-                        Error: {this.state.errorMessage}
-                    </div>);
+            return(
+                <ErrorMessage errorMessage={ this.state.errorMessage }></ErrorMessage>
+            );
         }
                 
         if(!this.state.errorMessage && this.state.lat){
@@ -49,7 +39,15 @@ class App extends React.Component{
         }
                     
         return(<Spinner></Spinner>);
-    }
+    };
+    
+    render(){
+        return(
+            <div className="border blue">
+                {this.renderContent()}
+            </div>
+        );
+    };
 }
 
 ReactDOM.render(
