@@ -3,8 +3,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 /* COMPONENTS */
-import SeasonDisplay from "./compnents/SeasonDisplay";
-
+import SeasonDisplay from "./compnents/SeasonDisplay/SeasonDisplay";
+import Spinner from "./compnents/Spinner/Spinner";
 
 /* Class-Based Component */
 class App extends React.Component{
@@ -48,7 +48,7 @@ class App extends React.Component{
             );
         }
                     
-        return(<div>Loading....</div>);
+        return(<Spinner></Spinner>);
     }
 }
 
